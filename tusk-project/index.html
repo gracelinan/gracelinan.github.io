@@ -1,0 +1,114 @@
+<html>
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 600px; height: 700px;"></div>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+       [ 'Sudan', 'Hong Kong', 1037415 ],
+       [ 'Japan1', 'Hong Kong', 452713 ],
+       [ 'Central African Republic', 'Hong Kong', 378835.000 ],
+       [ 'Belgium1', 'Hong Kong', 258524 ],
+       [ 'Congo', 'Hong Kong', 255464.000 ],
+       [ 'Singapore1', 'Hong Kong', 161510.000 ],
+       [ 'South Africa1', 'Hong Kong', 145577.000 ],
+       [ 'Somalia', 'Hong Kong', 95291.000 ],
+       [ 'France1', 'Hong Kong', 92299.457 ],
+       [ 'Uganda', 'Hong Kong', 88400.000 ],
+       [ 'Burundi', 'Hong Kong', 74034.000 ],
+       [ 'Chad', 'Hong Kong', 54851 ],
+       [ 'Zambia', 'Hong Kong', 33344.000 ],
+       [ 'UK1', 'Hong Kong', 32616.000 ],
+       [ 'Tanzania', 'Hong Kong', 31376.000 ],
+       [ 'Congo, Democratic', 'Hong Kong', 25639.000 ],
+       [ 'Kenya', 'Hong Kong', 25184 ],
+       [ 'Germany1', 'Hong Kong', 15970.000 ],
+       [ 'Mozambique', 'Hong Kong', 14607.000 ],
+       [ 'Djibouti', 'Hong Kong', 10901.000 ],
+       [ 'Zimbabwe1', 'Hong Kong', 6830.000 ],
+       [ 'Switzerland1', 'Hong Kong', 6517.000 ],
+       [ 'United Arab Emirates', 'Hong Kong', 6422 ],
+       [ 'Ethiopia', 'Hong Kong', 5011.000 ],
+       [ 'Cameroon', 'Hong Kong', 4827.000 ],
+       [ 'US1', 'Hong Kong', 4255.000 ],
+       [ 'Luxembourg1', 'Hong Kong', 4143.000 ],
+       [ 'China1', 'Hong Kong', 3368 ],
+       [ 'Portugal', 'Hong Kong', 3249.000 ],
+       [ 'Netherlands1', 'Hong Kong', 2988.84 ],
+       [ 'Botswana', 'Hong Kong', 2915.000 ],
+       [ 'Macau1', 'Hong Kong', 1865.000 ],
+       [ 'Taiwan1', 'Hong Kong', 1003.000 ],
+       [ 'Spain', 'Hong Kong', 675.7 ],
+       [ 'Former East Germany1', 'Hong Kong', 655.000 ],
+       [ 'Austria', 'Hong Kong', 581.53 ],
+       [ 'Malawi', 'Hong Kong', 455.000 ],
+       [ 'Unknown1', 'Hong Kong', 22437 ],
+       [ 'India1', 'Hong Kong', 424 ],
+       [ "Côte d'ivoire", 'Hong Kong', 212.000 ],
+       [ 'Italy1', 'Hong Kong', 124 ],
+       [ 'Slovenia', 'Hong Kong', 30.930 ],
+       [ 'Sweden1', 'Hong Kong', 27.9 ],
+       [ 'South Korea1', 'Hong Kong', 20 ],
+       [ 'Hungary', 'Hong Kong', 18 ],
+       [ 'Estonia', 'Hong Kong', 12.000 ],
+       [ 'Canada1', 'Hong Kong', 10 ],
+       [ 'Lithuania', 'Hong Kong', 4 ],
+       [ 'Australia1', 'Hong Kong', 4.000 ],
+       [ 'Denmark1', 'Hong Kong', 2 ],
+       [ 'Monaco', 'Hong Kong', 1 ],
+       [ 'Hong Kong', 'Japan', 776024.41 ],
+       [ 'Hong Kong', 'China', 124639 ],
+       [ 'Hong Kong', 'India', 91873 ],
+       [ 'Hong Kong', 'Taiwan', 32155 ],
+       [ 'Hong Kong', 'Macau', 20350 ],
+       [ 'Hong Kong', 'Germany', 16557.9 ],
+       [ 'Hong Kong', 'US', 15990.245 ],
+       [ 'Hong Kong', 'Former East Germany', 12906 ],
+       [ 'Hong Kong', 'Thailand', 10111 ],
+       [ 'Hong Kong', 'Singapore', 7187.27 ],
+       [ 'Hong Kong', 'Brunei', 4998 ],
+       [ 'Hong Kong', 'France', 4664 ],
+       [ 'Hong Kong', 'South Africa', 2898 ],
+       [ 'Hong Kong', 'UK', 1614 ],
+       [ 'Hong Kong', 'South Korea', 571 ],
+       [ 'Hong Kong', 'Indonesia', 420 ],
+       [ 'Hong Kong', 'Italy', 350 ],
+       [ 'Hong Kong', 'Switzerland', 273 ],
+       [ 'Hong Kong', 'Philippines', 204 ],
+       [ 'Hong Kong', 'Eritrea', 175 ],
+       [ 'Hong Kong', 'Malaysia', 169 ],
+       [ 'Hong Kong', 'Swaziland', 83 ],
+       [ 'Hong Kong', 'Canada', 79 ],
+       [ 'Hong Kong', 'New Caledonia', 19 ],
+       [ 'Hong Kong', 'Zimbabwe', 18 ],
+       [ 'Hong Kong', 'Netherlands', 16 ],
+       [ 'Hong Kong', 'Sweden', 6 ],
+       [ 'Hong Kong', 'Belgium', 6 ],
+       [ 'Hong Kong', 'New Zealand', 5 ],
+       [ 'Hong Kong', 'Saint Lucia', 4 ],
+       [ 'Hong Kong', 'Luxembourg', 3 ],
+       [ 'Hong Kong', 'Australia', 2 ],
+       [ 'Hong Kong', 'Denmark', 1 ],
+       [ 'Hong Kong', 'Unknown', 3593 ]
+    ]);
+
+    // Set chart options
+    var options = {
+      width: 800,
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</body>
+</html>

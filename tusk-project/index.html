@@ -1,53 +1,56 @@
-<html>
-<body>
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Your CSS files -->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- google fonts: Open Sans (sans) and Lora ) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Project 3 page</title>
+  </head>
 
-<div id="sankey_multiple" style="width: 600px; height: 700px;"></div>
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
 
-<script type="text/javascript">
-  google.charts.load("current", {packages:["sankey"]});
-  google.charts.setOnLoadCallback(drawChart);
-   function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'From');
-    data.addColumn('string', 'To');
-    data.addColumn('number', 'Weight');
-    data.addRows([
-       [ 'Sudan', 'Hong Kong', 1037415 ],
-       [ 'Japan (exporter)', 'Hong Kong', 460011 ],
-       [ 'Central African Republic', 'Hong Kong', 390816.000 ],
-       [ 'Belgium', 'Hong Kong', 258585 ],
-       [ 'Congo', 'Hong Kong', 258258.000 ],
-       [ 'France', 'Hong Kong', 243889.457 ],
-       [ 'South Africa', 'Hong Kong', 167723.000 ],
-       [ 'Singapore', 'Hong Kong', 161510.000 ],
-       [ 'Somalia', 'Hong Kong', 95291.000 ],
-       [ 'Uganda', 'Hong Kong', 88400.000 ],
-       [ 'Burundi', 'Hong Kong', 74034.000 ],
-       [ 'UK', 'Hong Kong', 56297.000 ],
-       [ 'Chad', 'Hong Kong', 54851 ],
-       [ 'China (exporter)', 'Hong Kong', 3368 ],
-       [ 'All other exporters', 'Hong Kong', 263328.9 ],
-       [ 'Hong Kong', 'Japan (importer)', 776024.41 ],
-       [ 'Hong Kong', 'China (importer)', 124639 ],
-       [ 'Hong Kong', 'India', 91873 ],
-       [ 'Hong Kong', 'Taiwan', 32155 ],
-       [ 'Hong Kong', 'Macau', 20350 ],
-       [ 'Hong Kong', 'Germany', 29463.9 ],
-       [ 'Hong Kong', 'US', 15990.245 ],
-       [ 'Hong Kong', 'Thailand', 10111 ],
-       [ 'Hong Kong', 'All other importers', 27349.27 ]
-    ]);
+    <div class="header">
+      <h1 class="headline">Elephant Tusks Trade through Hong Kong</h1>
+      <p class="byline">By Grace Li</p>
+      <p class="date">Published August 12, 2019</p>
+    </div>
 
-    // Set chart options
-    var options = {
-      width: 800,
-    };
+    <div class="story-body">
+      <p class="body-text">From 1977 to 2017, Hong Kong imported 3,614 tons of elephant tusks from countries including Sudan, Japan and Central African Repulic; the city reexported 1,128 tons to Japan, China, India and some other countries, according to data from the Convention on International Trade in Endangered Species of Wild Fauna and Flora ("CITES").</p>
+    </div>
 
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
-    chart.draw(data, options);
-   }
-</script>
-</body>
+    <div class="chart-section">
+      <p class="chart-title">Change over the Years</p>
+      <p class="chart-subhead">Here's a chart showing the import and export from 1977 to 2017.</p>
+        <div class="chart">
+          <img src="images/year-changes.png"/>
+        </div>
+      </div>
+      <p class="chart-source">Sources: CITES Trade Database</p>
+    </div>
+
+      <div class="chart-section">
+        <p class="chart-title">Import versus Export</p>
+        <div class="chart-row">
+          <div class="chart">
+            <img src="images/tusks-trade-chart.png"/>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+
+  </body>
+
 </html>

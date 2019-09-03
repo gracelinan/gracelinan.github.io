@@ -1,3 +1,5 @@
+
+
 body {
 	margin:auto;
 	padding:50px 10px;
@@ -37,8 +39,8 @@ body {
 }
 
 .chart-section.wide{
-	width:80%;
-	max-width:1000px;
+	width:100%;
+	max-width:1200px;
 }
 
 .chart-section.wide p.chart-title {
@@ -120,8 +122,8 @@ p.note {
 /* chart styles */
 
 .chart-section {
-	width:85%;
-	max-width:1000px;
+	width:100%;
+	max-width:1200px;
 	padding:20px 0px;
 }
 
@@ -173,12 +175,34 @@ p.chart-source {
 
 
 .chart img {
-	width:80%;
+	width:100%;
 }
 
 
 
 
+/* photos */
+
+.photo-section {
+	padding:30px 0px;
+	width:100%;
+	margin:auto;
+	display:flex;
+	max-width:1200px;
+}
+
+.photo {
+	width:100%;
+	padding-right:15px;
+}
+.photo img {
+	width:100%;	
+}
+
+p.caption {
+	font-size:0.9rem;
+	margin:0;
+}
 
 
 
@@ -202,3 +226,6 @@ p.chart-source {
 	}
 
 }
+
+
+

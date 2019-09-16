@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+
+        #g-templates-laptop, #g-templates-medium, #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Homework 03</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Optional kicker</p>
+      <h1 class="headline">Here is your headline</h1>
+      <h2 class="subhead">This is the subhead</h2>
+      <p class="byline">By YOUR NAME</p>
+      <p class="date">Published September 9, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+
+<!-- Generated by ai2html v0.94.0 - 2019-09-15 18:37 -->
+<!-- ai file: borough.ai -->
+<style media="screen,print">
+	#g-borough-box ,
+	#g-borough-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-borough-box p {
+		margin:0;
+	}
+	#g-borough-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-borough-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-borough-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-borough-box .g-aiPointText p { white-space: nowrap; }
+	#g-borough-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-borough-medium p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:18px;
+		line-height:22px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-borough-medium .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:24px;
+		line-height:29px;
+	}
+	#g-borough-medium .g-pstyle1 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(255,255,255);
+	}
+	#g-borough-medium .g-pstyle2 {
+		font-weight:700;
+		font-size:14px;
+		line-height:17px;
+		height:17px;
+		color:rgb(255,148,10);
+	}
+	#g-borough-medium .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-borough-medium .g-cstyle0 {
+		color:rgb(255,148,10);
+	}
+	#g-borough-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-borough-laptop p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-borough-laptop .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:24px;
+		line-height:29px;
+	}
+	#g-borough-laptop .g-pstyle1 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(255,255,255);
+	}
+	#g-borough-laptop .g-pstyle2 {
+		font-weight:700;
+		font-size:14px;
+		line-height:17px;
+		height:17px;
+		color:rgb(255,148,10);
+	}
+	#g-borough-laptop .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-borough-laptop .g-cstyle0 {
+		color:rgb(255,148,10);
+	}
+	#g-borough-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-borough-mobile p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-borough-mobile .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:24px;
+		line-height:29px;
+	}
+	#g-borough-mobile .g-pstyle1 {
+		font-family:arial,helvetica,sans-serif;
+		height:19px;
+		color:rgb(255,148,10);
+	}
+	#g-borough-mobile .g-pstyle2 {
+		font-weight:700;
+		height:19px;
+		color:rgb(255,148,10);
+	}
+	#g-borough-mobile .g-pstyle3 {
+		font-family:arial,helvetica,sans-serif;
+		height:19px;
+		color:rgb(153,153,153);
+	}
+	#g-borough-mobile .g-pstyle4 {
+		font-weight:500;
+		height:19px;
+		color:rgb(255,255,255);
+	}
+	#g-borough-mobile .g-pstyle5 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-borough-mobile .g-cstyle0 {
+		color:rgb(255,148,10);
+	}
+
+</style>
+
+<div id="g-borough-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-borough-medium" class="g-artboard" style="width:620px; height:450px;" data-aspect-ratio="1.378" data-min-width="620">
+<div style=""></div>
+		<img id="g-borough-medium-img" class="g-aiImg" alt="" src="borough-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:4%;left:2.4302%;width:96.129%;">
+			<p class="g-pstyle0"><span class="g-cstyle0">Manhattan</span> Residents Feel Better about Crime Control</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:11.1111%;left:2.4465%;width:81.7742%;">
+			<p>Percentage of respondents rate crime control as excellent or good</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.012%;margin-top:-8.6px;left:64.011%;width:53px;">
+			<p class="g-pstyle1">Bronx</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.3813%;margin-top:-10.2px;left:42.807%;width:90px;">
+			<p class="g-pstyle2">Manhattan</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:52.5676%;margin-top:-8.6px;left:70.5834%;width:59px;">
+			<p class="g-pstyle1">Queens</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:66.1232%;margin-top:-8.6px;left:52.0539%;width:68px;">
+			<p class="g-pstyle1">Brooklyn</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.2343%;margin-top:-8.6px;left:88.9873%;width:40px;">
+			<p class="g-pstyle3">40.0</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.4565%;margin-top:-8.6px;left:26.3419%;width:86px;">
+			<p class="g-pstyle1">Staten Island</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.5676%;margin-top:-8.6px;left:88.9873%;width:40px;">
+			<p class="g-pstyle3">50.0</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.9009%;margin-top:-8.6px;left:88.9873%;width:40px;">
+			<p class="g-pstyle3">60.0</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.7779%;margin-top:-8px;left:2.258%;width:249px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.7779%;margin-top:-8px;left:90.4698%;width:72px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-borough-laptop" class="g-artboard" style="width:490px; height:410px;" data-aspect-ratio="1.195" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-borough-laptop-img" class="g-aiImg" alt="" src="borough-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:2.6829%;left:2.5268%;width:78.1633%;">
+			<p class="g-pstyle0"><span class="g-cstyle0">Manhattan</span> Residents Feel Better about Crime Control</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:16.8293%;left:2.5268%;width:87.9592%;">
+			<p>Percentage of respondents rate crime control as excellent or good</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.062%;margin-top:-8.6px;left:61.3542%;width:51px;">
+			<p class="g-pstyle1">Bronx</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.3941%;margin-top:-10.2px;left:37.0382%;width:88px;">
+			<p class="g-pstyle2">Manhattan</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:55.0132%;margin-top:-8.6px;left:68.477%;width:57px;">
+			<p class="g-pstyle1">Queens</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.4522%;margin-top:-8.6px;left:45.8733%;width:66px;">
+			<p class="g-pstyle1">Brooklyn</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.94%;margin-top:-8.6px;left:19.1966%;width:83px;">
+			<p class="g-pstyle1">Staten Island</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.94%;margin-top:-8.6px;left:87.279%;width:39px;">
+			<p class="g-pstyle3">40.0</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.8669%;margin-top:-8.6px;left:87.279%;width:39px;">
+			<p class="g-pstyle3">50.0</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0376%;margin-top:-8.6px;left:87.279%;width:39px;">
+			<p class="g-pstyle3">60.0</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.5611%;margin-top:-8px;left:1.3265%;width:240px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.5611%;margin-top:-8px;left:88.7936%;width:70px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-borough-mobile" class="g-artboard" style="max-width: 375px;max-height: 401px" data-aspect-ratio="0.936" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 106.88% 0;"></div>
+		<img id="g-borough-mobile-img" class="g-aiImg" alt="" src="borough-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:0.998%;left:2.5017%;width:102.1333%;">
+			<p class="g-pstyle0"><span class="g-cstyle0">Manhattan</span> Residents Feel Better about Crime Control</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:15.2196%;left:2.5017%;width:80.2667%;">
+			<p>Percentage of respondents rate crime control as excellent or good</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.6734%;margin-top:-11px;left:2.3622%;width:70px;">
+			<p class="g-pstyle1">Manhattan</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:38.3817%;margin-top:-10.8px;left:80%;width:62px;">
+			<p class="g-pstyle2">60.5</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.4039%;margin-top:-11px;left:2.3622%;width:82px;">
+			<p class="g-pstyle3">Staten Island</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:48.1123%;margin-top:-10.8px;left:72.5333%;width:58px;">
+			<p class="g-pstyle4">54.8</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:53.1345%;margin-top:-11px;left:2.3622%;width:58px;">
+			<p class="g-pstyle3">Queens</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:57.8428%;margin-top:-10.8px;left:67.4667%;width:58px;">
+			<p class="g-pstyle4">51.5</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:62.865%;margin-top:-11px;left:2.3622%;width:62px;">
+			<p class="g-pstyle3">Brooklyn</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.5733%;margin-top:-10.8px;left:63.4667%;width:58px;">
+			<p class="g-pstyle4">48.7</p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.5955%;margin-top:-11px;left:2.3622%;width:49px;">
+			<p class="g-pstyle3">Bronx</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.3039%;margin-top:-10.8px;left:46.4%;width:58px;">
+			<p class="g-pstyle4">36.8</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:95.06%;margin-top:-8px;left:1.7333%;width:240px;">
+			<p class="g-pstyle5">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.8045%;margin-top:-8px;left:1.6237%;width:70px;">
+			<p class="g-pstyle5">Grace Li</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2019-09-15 18:37 -->
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+		<div class="chart-section">
+			<div class="chart-row">
+					<div class="chart">
+	
+							<!-- AI2HTML content goes here -->
+
+
+<!-- Generated by ai2html v0.94.0 - 2019-09-15 20:08 -->
+<!-- ai file: Man.ai -->
+<style media="screen,print">
+	#g-Man-box ,
+	#g-Man-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-Man-box p {
+		margin:0;
+	}
+	#g-Man-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-Man-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-Man-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-Man-box .g-aiPointText p { white-space: nowrap; }
+	#g-Man-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Man-medium p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:18px;
+		line-height:22px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-Man-medium .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:24px;
+		line-height:29px;
+	}
+	#g-Man-medium .g-pstyle1 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(252,250,250);
+	}
+	#g-Man-medium .g-pstyle2 {
+		font-family:arial,helvetica,sans-serif;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-Man-medium .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-Man-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Man-laptop p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-Man-laptop .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:22px;
+		line-height:26px;
+	}
+	#g-Man-laptop .g-pstyle1 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(252,250,250);
+	}
+	#g-Man-laptop .g-pstyle2 {
+		font-family:arial,helvetica,sans-serif;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-Man-laptop .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-Man-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Man-mobile p {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-Man-mobile .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:24px;
+		line-height:29px;
+	}
+	#g-Man-mobile .g-pstyle1 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(252,250,250);
+	}
+	#g-Man-mobile .g-pstyle2 {
+		font-family:arial,helvetica,sans-serif;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+	#g-Man-mobile .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+	}
+
+</style>
+
+<div id="g-Man-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-Man-medium" class="g-artboard" style="width:620px; height:585px;" data-aspect-ratio="1.06" data-min-width="620">
+<div style=""></div>
+		<img id="g-Man-medium-img" class="g-aiImg" alt="" src="Man-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:2.3932%;left:1.8758%;width:95.9677%;">
+			<p class="g-pstyle0">Northern Manhattan Less Happy with Crime Control</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:8.8889%;left:2.0561%;width:74.1935%;">
+			<p>Percentage of respondents rate crime control as excellent or good in Manhattan Community Districts</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:47.078%;margin-top:-8.4px;left:62.5987%;width:49px;">
+			<p class="g-pstyle1">CD11</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.6662%;margin-top:-8.1px;left:79.4404%;width:46px;">
+			<p class="g-pstyle2">80.0</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:76.7687%;margin-top:-8.1px;left:79.4404%;width:50px;">
+			<p class="g-pstyle2">60.0 </p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.8713%;margin-top:-8.1px;left:79.4404%;width:50px;">
+			<p class="g-pstyle2">40.0 </p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.4626%;margin-top:-8.4px;left:38.7463%;width:43px;">
+			<p class="g-pstyle1">CD1</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:96.7522%;margin-top:-8px;left:2.4867%;width:218px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:96.7522%;margin-top:-8px;left:88.5111%;width:65px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-Man-laptop" class="g-artboard" style="width:490px; height:558px;" data-aspect-ratio="0.878" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-Man-laptop-img" class="g-aiImg" alt="" src="Man-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:2.8674%;left:3.1072%;width:96.1224%;">
+			<p class="g-pstyle0">Northern Manhattan Less Happy with </p>
+			<p class="g-pstyle0">Crime Control</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:13.4409%;left:3.3159%;width:54.4898%;">
+			<p>Percentage of respondents rate crime control as excellent or good in Manhattan Community Districts</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.6965%;margin-top:-8.4px;left:66.4631%;width:44px;">
+			<p class="g-pstyle1">CD11</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.5228%;margin-top:-8.1px;left:84.1275%;width:42px;">
+			<p class="g-pstyle2">80.0</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:75.8239%;margin-top:-8.1px;left:84.1275%;width:45px;">
+			<p class="g-pstyle2">60.0 </p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.1249%;margin-top:-8.1px;left:84.1275%;width:45px;">
+			<p class="g-pstyle2">40.0 </p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.7932%;margin-top:-8.4px;left:41.4457%;width:40px;">
+			<p class="g-pstyle1">CD1</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.6703%;margin-top:-8px;left:3.3504%;width:185px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.6703%;margin-top:-8px;left:89.5596%;width:58px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-Man-mobile" class="g-artboard" style="max-width: 375px;max-height: 585px" data-aspect-ratio="0.641" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 155.9467% 0;"></div>
+		<img id="g-Man-mobile-img" class="g-aiImg" alt="" src="Man-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:2.565%;left:3.6601%;width:150.9333%;">
+			<p class="g-pstyle0">Northern Manhattan </p>
+			<p class="g-pstyle0">Less Happy with Crime Control</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:12.4829%;left:3.5328%;width:92.5333%;">
+			<p>Percentage of respondents rate crime control </p>
+			<p>as excellent or good in Manhattan Community Districts</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:51.7111%;margin-top:-8.4px;left:59.4727%;width:50px;">
+			<p class="g-pstyle1">CD11</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:74.23%;margin-top:-8.1px;left:85.65%;width:48px;">
+			<p class="g-pstyle2">80.0</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.821%;margin-top:-8.1px;left:85.65%;width:52px;">
+			<p class="g-pstyle2">60.0 </p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.412%;margin-top:-8.1px;left:85.65%;width:52px;">
+			<p class="g-pstyle2">40.0 </p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.8328%;margin-top:-8.4px;left:22.3987%;width:45px;">
+			<p class="g-pstyle1">CD1</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.4693%;margin-top:-8px;left:87.2911%;width:58px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.4693%;margin-top:-8px;left:3.0445%;width:185px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2019-09-15 20:08 -->
+
+</div>
+</div>
+</div>
+
+<div class="story-body">
+<p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+	
+					</div>
+			</div>
+	</div>
+
+	<div class="chart-section">
+    <div class="chart-row">
+        <div class="chart">
+
+            <!-- AI2HTML content goes here -->
+
+<!-- Generated by ai2html v0.94.0 - 2019-09-15 22:05 -->
+<!-- ai file: E-Har.ai -->
+<style media="screen,print">
+	#g-E-Har-box ,
+	#g-E-Har-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-E-Har-box p {
+		margin:0;
+	}
+	#g-E-Har-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-E-Har-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-E-Har-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-E-Har-box .g-aiPointText p { white-space: nowrap; }
+	#g-E-Har-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-E-Har-medium p {
+		font-family:arial,helvetica,sans-serif;
+		font-size:18px;
+		line-height:22px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(88,89,87);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-E-Har-medium .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:30px;
+		line-height:36px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-medium .g-pstyle1 {
+		font-family:Times New Roman;
+		font-weight:400;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-medium .g-pstyle2 {
+		height:22px;
+	}
+	#g-E-Har-medium .g-pstyle3 {
+		font-weight:500;
+		font-size:16px;
+		line-height:19px;
+		height:19px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-medium .g-pstyle4 {
+		font-size:16px;
+		line-height:19px;
+		height:19px;
+		color:rgb(153,153,153);
+	}
+	#g-E-Har-medium .g-pstyle5 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-E-Har-laptop p {
+		font-family:arial,helvetica,sans-serif;
+		font-size:18px;
+		line-height:22px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(88,89,87);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-E-Har-laptop .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:26px;
+		line-height:31px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-laptop .g-pstyle1 {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-laptop .g-pstyle2 {
+		height:22px;
+	}
+	#g-E-Har-laptop .g-pstyle3 {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:14px;
+		color:rgb(0,0,0);
+	}
+	#g-E-Har-laptop .g-pstyle4 {
+		font-size:16px;
+		line-height:19px;
+		height:19px;
+		color:rgb(153,153,153);
+	}
+	#g-E-Har-laptop .g-cstyle0 {
+		color:rgb(148,52,110);
+	}
+	#g-E-Har-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-E-Har-mobile p {
+		font-weight:500;
+		font-size:12px;
+		line-height:14px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-E-Har-mobile .g-pstyle0 {
+		font-family:Source Sans Variable;
+		font-weight:700;
+		font-size:21px;
+		line-height:25px;
+	}
+	#g-E-Har-mobile .g-pstyle1 {
+		font-family:Times New Roman;
+		font-weight:400;
+		font-size:16px;
+		line-height:19px;
+	}
+	#g-E-Har-mobile .g-pstyle2 {
+		font-family:arial,helvetica,sans-serif;
+		font-size:7px;
+		line-height:9px;
+		height:9px;
+		filter:alpha(opacity=0);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity:0;
+		color:rgb(153,153,153);
+	}
+	#g-E-Har-mobile .g-pstyle3 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:16px;
+		line-height:19px;
+		height:19px;
+	}
+	#g-E-Har-mobile .g-pstyle4 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:14px;
+		line-height:17px;
+		color:rgb(129,132,127);
+	}
+	#g-E-Har-mobile .g-pstyle5 {
+		height:14px;
+	}
+	#g-E-Har-mobile .g-pstyle6 {
+		font-family:arial,helvetica,sans-serif;
+		font-weight:bold;
+		font-size:14px;
+		line-height:17px;
+		color:rgb(243,244,242);
+	}
+	#g-E-Har-mobile .g-cstyle0 {
+		color:rgb(148,52,110);
+	}
+
+</style>
+
+<div id="g-E-Har-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-E-Har-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-E-Har-medium-img" class="g-aiImg" alt="" src="E-Har-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:3.2941%;left:2.3859%;width:125%;">
+			<p class="g-pstyle0">East Harlem Residents Don&rsquo;t Feel as Safe</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:12.7059%;left:2.5687%;width:84.1935%;">
+			<p class="g-pstyle1">Percentage of respondents rate as excellent or good </p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.5049%;margin-top:-12.6px;left:3.5227%;width:80px;">
+			<p class="g-pstyle2">Crime control</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.9284%;margin-top:-10.2px;left:77.6021%;width:95px;">
+			<p class="g-pstyle3">Manhattan</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:34.6343%;margin-top:-10.2px;left:77.6021%;width:50px;">
+			<p class="g-pstyle3">NYC</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:39.3402%;margin-top:-10.2px;left:77.6021%;width:101px;">
+			<p class="g-pstyle3">East Harlem</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:40.3873%;margin-top:-12.6px;left:3.5227%;width:181px;">
+			<p class="g-pstyle2">Feeling safe riding a subway at night</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.2695%;margin-top:-12.6px;left:3.5227%;width:266px;">
+			<p class="g-pstyle2">Feeling safe walking alone in your neighborhood at night</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.6814%;margin-top:-12.6px;left:3.5227%;width:159px;">
+			<p class="g-pstyle2">Neighborhood as a place to live</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.8148%;margin-top:-11px;left:3.4825%;width:27px;">
+			<p class="g-pstyle4">0</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.5207%;margin-top:-11px;left:21.1538%;width:32px;">
+			<p class="g-pstyle4">20</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.5207%;margin-top:-11px;left:39.3237%;width:32px;">
+			<p class="g-pstyle4">40</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.5207%;margin-top:-11px;left:57.4935%;width:32px;">
+			<p class="g-pstyle4">60</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.5207%;margin-top:-11px;left:75.6634%;width:32px;">
+			<p class="g-pstyle4">80</p>
+		</div>
+		<div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:95.7648%;margin-top:-8px;left:2.0027%;width:244px;">
+			<p class="g-pstyle5">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:95.7648%;margin-top:-8px;left:88.1853%;width:71px;">
+			<p class="g-pstyle5">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-E-Har-laptop" class="g-artboard" style="width:490px; height:401px;" data-aspect-ratio="1.222" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-E-Har-laptop-img" class="g-aiImg" alt="" src="E-Har-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:3.4913%;left:2.8148%;width:158.1633%;">
+			<p class="g-pstyle0"><span class="g-cstyle0">East Harlem</span> Residents Don&rsquo;t Feel as Safe</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:10.9726%;left:3.0461%;width:87.551%;">
+			<p class="g-pstyle1">Percentage of respondents rate as excellent or good </p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:21.1086%;margin-top:-12.6px;left:3.4369%;width:80px;">
+			<p class="g-pstyle2">Crime control</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:25.3155%;margin-top:-7.5px;left:84.8615%;width:77px;">
+			<p class="g-pstyle3">Manhattan</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8068%;margin-top:-7.5px;left:84.8615%;width:43px;">
+			<p class="g-pstyle3">NYC</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.8219%;margin-top:-12.6px;left:3.4369%;width:181px;">
+			<p class="g-pstyle2">Feeling safe riding a subway at night</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:50.535%;margin-top:-12.6px;left:3.4369%;width:266px;">
+			<p class="g-pstyle2">Feeling safe walking alone in your neighborhood at night</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:64.7496%;margin-top:-12.6px;left:3.4369%;width:159px;">
+			<p class="g-pstyle2">Neighborhood as a place to live</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.7888%;margin-top:-11px;left:3.3861%;width:27px;">
+			<p class="g-pstyle4">0</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.5369%;margin-top:-11px;left:25.7458%;width:32px;">
+			<p class="g-pstyle4">20</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.5369%;margin-top:-11px;left:48.736%;width:32px;">
+			<p class="g-pstyle4">40</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.5369%;margin-top:-11px;left:71.7265%;width:32px;">
+			<p class="g-pstyle4">60</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.5369%;margin-top:-11px;left:94.717%;width:32px;">
+			<p class="g-pstyle4">80</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.5064%;margin-top:-8px;left:1.9218%;width:244px;">
+			<p class="g-pstyle3">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai1-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.7557%;margin-top:-8px;left:88.9284%;width:71px;">
+			<p class="g-pstyle3">Grace Li</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-E-Har-mobile" class="g-artboard" style="max-width: 375px;max-height: 838px" data-aspect-ratio="0.448" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 223.4133% 0;"></div>
+		<img id="g-E-Har-mobile-img" class="g-aiImg" alt="" src="E-Har-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:1.5517%;left:4.1136%;width:206.6667%;">
+			<p class="g-pstyle0"><span class="g-cstyle0">East Harlem</span> Residents </p>
+			<p class="g-pstyle0">Don&rsquo;t Feel as Safe</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:7.5197%;left:4.1136%;width:114.4%;">
+			<p class="g-pstyle1">Percentage of respondents rate as excellent or good </p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:10.9096%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">70</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.055%;margin-top:-11.4px;left:7.2526%;width:119px;">
+			<p class="g-pstyle3">Crime control</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.5196%;margin-top:-5.4px;left:80.9505%;width:30px;">
+			<p class="g-pstyle2">60</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs" style="top:16.3524%;left:51.1685%;width:7.2%;">
+			<p class="g-pstyle4">60.5</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:17.13%;margin-top:-7.5px;left:79.2857%;width:77px;">
+			<p class="g-pstyle5">Manhattan</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:18.9204%;margin-top:-7.5px;left:79.2857%;width:43px;">
+			<p class="g-pstyle5">NYC</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:21.1747%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">50</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:21.7236%;left:32.5019%;width:7.2%;">
+			<p class="g-pstyle4">50.1</p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.3072%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">40</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:29.2433%;left:13.8352%;width:7.2%;">
+			<p class="g-pstyle6">34.9</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.3203%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">30</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:36.4528%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">20</p>
+		</div>
+		<div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:41.5853%;margin-top:-5.4px;left:83.6172%;width:30px;">
+			<p class="g-pstyle2">10</p>
+		</div>
+		<div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.5984%;margin-top:-5.4px;left:84.6508%;width:26px;">
+			<p class="g-pstyle2">0</p>
+		</div>
+		<div id="g-ai2-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:50.6535%;margin-top:-11.4px;left:7.2156%;width:248px;">
+			<p class="g-pstyle3">Neighborhood as a place to live</p>
+		</div>
+		<div id="g-ai2-18" class="g-ai2html-settings g-aiAbs" style="top:54.5476%;left:51.1685%;width:7.2%;">
+			<p class="g-pstyle4">72.9</p>
+		</div>
+		<div id="g-ai2-19" class="g-ai2html-settings g-aiAbs" style="top:59.4414%;left:32.5019%;width:7.2%;">
+			<p class="g-pstyle4">62.6</p>
+		</div>
+		<div id="g-ai2-20" class="g-ai2html-settings g-aiAbs" style="top:67.916%;left:13.8352%;width:7.2%;">
+			<p class="g-pstyle6">46.2</p>
+		</div>
+		<div id="g-ai2-21" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:95.8463%;margin-top:-8px;left:4.7779%;width:244px;">
+			<p class="g-pstyle5">Source: Citizens Budget Commission</p>
+		</div>
+		<div id="g-ai2-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.7561%;margin-top:-8px;left:4.8664%;width:71px;">
+			<p class="g-pstyle5">Grace Li</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2019-09-15 22:05 -->
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+  </body>
+</html>
+
+
+
+
+
+<script type="text/javascript">
+    (function() {
+        // only want one resizer on the page
+        if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+        document.documentElement.className += " g-resizer-v3-init";
+        // require IE9+
+        if (!("querySelector" in document)) return;
+        function resizer() {
+            var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                widthById = {};
+            elements.forEach(function(el) {
+                var parent = el.parentNode,
+                    width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                    minwidth = el.getAttribute("data-min-width"),
+                    maxwidth = el.getAttribute("data-max-width");
+                widthById[parent.id] = width;
+                if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                    el.style.display = "block";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+            try {
+                if (window.parent && window.parent.$) {
+                    window.parent.$("body").trigger("resizedcontent", [window]);
+                }
+                if (window.require) {
+                    require(['foundation/main'], function() {
+                        require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                            AppCommunicator.triggerResize();
+                        });
+                    });
+                }
+            } catch(e) { console.log(e); }
+        }
+        document.addEventListener('DOMContentLoaded', resizer);
+        // feel free to replace throttle with _.throttle, if available
+        window.addEventListener('resize', throttle(resizer, 200));        
+        function throttle(func, wait) {
+            // from underscore.js
+            var _now = Date.now || function() { return new Date().getTime(); },
+                context, args, result, timeout = null, previous = 0;
+            var later = function() {
+                previous = _now();
+                timeout = null;
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            };
+            return function() {
+                var now = _now(), remaining = wait - (now - previous);
+                context = this;
+                args = arguments;
+                if (remaining <= 0 || remaining > wait) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+                    previous = now;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                } else if (!timeout && options.trailing !== false) {
+                    timeout = setTimeout(later, remaining);
+                }
+                return result;
+            };
+        }
+       
+    })();
+</script>

@@ -1,0 +1,16 @@
+{	
+	"fonts": [
+        {
+            "aifont": "SourceSansRoman-Bold",
+            "family": "Source Sans Variable",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "TimesNewRomanPSMT",
+            "family": "Times New Roman",
+            "weight": "400",
+            "style": ""
+        },
+    ]
+}
